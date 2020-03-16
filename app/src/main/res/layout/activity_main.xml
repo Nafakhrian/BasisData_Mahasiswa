@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/bioNim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="NIM" />
+
+    <EditText
+        android:id="@+id/bioNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nama" />
+
+    <RadioGroup
+        android:id="@+id/bioJk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:id="@+id/textJk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jenis Kelamin"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:id="@+id/bioJkPria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pria" />
+
+        <RadioButton
+            android:id="@+id/bioJkWanita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wanita" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:id="@+id/textAgama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Agama"
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/bioAgama"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/agama_list"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/bioAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Alamat"
+        android:maxLines="2"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/bioId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="6dp"
+        android:text="Id Biodata"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tambah"
+            android:onClick="addBio"/>
+
+        <Button
+            android:id="@+id/btnUbah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ubah"
+            android:onClick="editBio"/>
+
+        <Button
+            android:id="@+id/btnHapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hapus"
+            android:onClick="delBio"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/bioList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>
